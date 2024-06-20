@@ -1,11 +1,17 @@
-test_list = [0, 1, 7, 2, 4, 8, 9, 3, 10]
-index = 0
-summ = 0
+import random
 
-for el in test_list:
-    index = index + 1
-    if index % 2 == 0:
-        summ = summ + el
+list_range = random.randint(3,10)
+list_test = []
+list_result = []
+count = 0
+while count < list_range:
+    list_test.append(random.randint(1,10))
+    count += 1
 
-print('sum', summ)
-print(summ * test_list[len(test_list) - 1])
+print(list_test)
+
+list_result.append(list_test[0])
+list_result.append(list_test[2])
+list_result.append(list_test[len(list_test) - 2])
+
+print(list_result)
