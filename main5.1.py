@@ -18,7 +18,10 @@ def is_valid_variable_name(word):
         return False
 
     if word.count('_') > 1:
-        return False
+        parts = word.split('_')
+        for part in parts:
+            if not part:
+                return False
 
     return True
 
